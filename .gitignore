@@ -104,3 +104,5 @@ desktop.ini
 *.bak
 *.swp
 *~
+*_backup.sql
+smartpick_backup.sql

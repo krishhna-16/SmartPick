@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Login from "./Login.jsx";
 import "./App.css";
 
 const categories = [
@@ -159,6 +160,30 @@ const categoryData = {
 const FALLBACK_IMAGE = "/images/laptop-placeholder.svg";
 
 function App() {
+  const [currentPath, setCurrentPath] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.location.pathname.startsWith("/login") ? "/login" : "/";
+    }
+    return "/";
+  });
+
+  useEffect(() => {
+    function handlePopState() {
+      const path = window.location.pathname.startsWith("/login") ? "/login" : "/";
+      setCurrentPath(path);
+    }
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  function navigateTo(path) {
+    if (window.location.pathname !== path) {
+      window.history.pushState({}, "", path);
+      setCurrentPath(path);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   const [category, setCategory] = useState("");
   const [purpose, setPurpose] = useState("Student");
   const [budget, setBudget] = useState(60000);
@@ -315,11 +340,43 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>SmartPick</h1>
-        <p>Smart Product Recommendation System</p>
+        <div
+          className="header-brand"
+          onClick={() => navigateTo("/")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") navigateTo("/");
+          }}
+        >
+          <h1>SmartPick</h1>
+          <p>Smart Product Recommendation System</p>
+        </div>
+        <nav className="header-nav">
+          {currentPath === "/login" ? (
+            <button
+              type="button"
+              className="header-btn"
+              onClick={() => navigateTo("/")}
+            >
+              ← Recommendations
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="header-btn login-btn"
+              onClick={() => navigateTo("/login")}
+            >
+              Sign In
+            </button>
+          )}
+        </nav>
       </header>
 
-      <main className="main">
+      {currentPath === "/login" ? (
+        <Login onNavigate={navigateTo} />
+      ) : (
+        <main className="main">
         {!category ? (
           <>
             <p className="eyebrow">SMARTER SHOPPING STARTS HERE</p>
@@ -624,6 +681,7 @@ function App() {
           </>
         ) : null}
       </main>
+      )}
 
       <footer className="footer">
         SmartPick | Making smarter product choices
