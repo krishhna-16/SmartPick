@@ -283,7 +283,9 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/products/recommend?${params.toString()}`
+        
+      `https://smartpick-1.onrender.com/api/products/recommend?${params.toString()}`
+
       );
 
       if (!response.ok) {
