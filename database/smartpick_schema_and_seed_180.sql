@@ -25,6 +25,15 @@ CREATE TABLE IF NOT EXISTS products (
     battery_life_days INT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS users (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    password_salt VARCHAR(255) NULL,
+    created_at DATETIME NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 INSERT INTO products (id, name, brand, category, price, processor, ram_gb, storage_gb, gpu, display_size, battery_wh, rating, image_url, resolution, has_gps, battery_life_days)
 VALUES
 (1, 'ROG Strix G16', 'ASUS', 'Laptop', 89999.00, 'Intel Core i7', 16, 512, 'NVIDIA RTX 4060', 16.00, 90.00, 4.50, '/images/laptops/laptop-001.jpg', NULL, NULL, NULL),

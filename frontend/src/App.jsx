@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Login from "./Login.jsx";
+import LoginLanding from "./LoginLanding.jsx";
+import { API_BASE_URL } from "./apiConfig";
 import "./App.css";
 
 const categories = [
@@ -162,15 +163,20 @@ const FALLBACK_IMAGE = "/images/laptop-placeholder.svg";
 function App() {
   const [currentPath, setCurrentPath] = useState(() => {
     if (typeof window !== "undefined") {
-      return window.location.pathname.startsWith("/login") ? "/login" : "/";
+      const p = window.location.pathname.toLowerCase();
+      if (p.startsWith("/register")) return "/register";
+      if (p.startsWith("/login")) return "/login";
+      return "/";
     }
     return "/";
   });
 
   useEffect(() => {
     function handlePopState() {
-      const path = window.location.pathname.startsWith("/login") ? "/login" : "/";
-      setCurrentPath(path);
+      const p = window.location.pathname.toLowerCase();
+      if (p.startsWith("/register")) setCurrentPath("/register");
+      else if (p.startsWith("/login")) setCurrentPath("/login");
+      else setCurrentPath("/");
     }
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
@@ -182,6 +188,48 @@ function App() {
       setCurrentPath(path);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+  }
+
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const saved = localStorage.getItem("smartpick_user");
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
+  });
+
+  function handleExploreDemo() {
+    const demoUser = { isDemo: true, name: "Demo User" };
+    setCurrentUser(demoUser);
+    try {
+      localStorage.setItem("smartpick_user", JSON.stringify(demoUser));
+    } catch (e) {
+      console.warn("Storage not available", e);
+    }
+    navigateTo("/");
+  }
+
+  function handleLoginSuccess(userProfile) {
+    setCurrentUser(userProfile);
+    try {
+      localStorage.setItem("smartpick_user", JSON.stringify(userProfile));
+    } catch (e) {
+      console.warn("Storage not available", e);
+    }
+    navigateTo("/");
+  }
+
+  function handleLogout() {
+    setCurrentUser(null);
+    try {
+      localStorage.removeItem("smartpick_user");
+    } catch (e) {
+      console.warn("Storage not available", e);
+    }
+    setCategory("");
+    setShowResults(false);
+    navigateTo("/login");
   }
 
   const [category, setCategory] = useState("");
@@ -308,9 +356,7 @@ function App() {
 
     try {
       const response = await fetch(
-        
-      `https://smartpick-1.onrender.com/api/products/recommend?${params.toString()}`
-
+        `${API_BASE_URL}/api/products/recommend?${params.toString()}`
       );
 
       if (!response.ok) {
@@ -337,46 +383,73 @@ function App() {
 
   const currentConfig = categoryData[category];
 
+  // If unauthenticated or accessing /login or /register, display the Login Landing Page
+  if (!currentUser || currentPath === "/login" || currentPath === "/register") {
+    return (
+      <LoginLanding
+        onExploreDemo={handleExploreDemo}
+        onLoginSuccess={handleLoginSuccess}
+        initialTab={currentPath === "/register" ? "register" : "login"}
+        onNavigate={navigateTo}
+      />
+    );
+  }
+
   return (
     <div className="app">
       <header className="header">
         <div
           className="header-brand"
-          onClick={() => navigateTo("/")}
+          onClick={() => {
+            setCategory("");
+            setShowResults(false);
+            setError("");
+          }}
           role="button"
           tabIndex={0}
           onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") navigateTo("/");
+            if (e.key === "Enter" || e.key === " ") {
+              setCategory("");
+              setShowResults(false);
+              setError("");
+            }
           }}
         >
           <h1>SmartPick</h1>
           <p>Smart Product Recommendation System</p>
         </div>
         <nav className="header-nav">
-          {currentPath === "/login" ? (
-            <button
-              type="button"
-              className="header-btn"
-              onClick={() => navigateTo("/")}
-            >
-              ← Recommendations
-            </button>
+          {currentUser.isDemo ? (
+            <span className="demo-pill">🚀 Demo Mode</span>
           ) : (
-            <button
-              type="button"
-              className="header-btn login-btn"
-              onClick={() => navigateTo("/login")}
-            >
-              Sign In
-            </button>
+            <span className="user-pill">👤 {currentUser.name}</span>
           )}
+          <button
+            type="button"
+            className="header-btn logout-btn"
+            onClick={handleLogout}
+          >
+            {currentUser.isDemo ? "Exit Demo" : "Logout"}
+          </button>
         </nav>
       </header>
 
-      {currentPath === "/login" ? (
-        <Login onNavigate={navigateTo} />
-      ) : (
-        <main className="main">
+      <main className="main">
+        {currentUser.isDemo && (
+          <div className="demo-banner">
+            <span>
+              🚀 <strong>Demo Mode Active:</strong> Exploring real SmartPick recommendations with 180+ verified products.
+            </span>
+            <button
+              type="button"
+              className="demo-banner-exit"
+              onClick={handleLogout}
+            >
+              Exit Demo
+            </button>
+          </div>
+        )}
+
         {!category ? (
           <>
             <p className="eyebrow">SMARTER SHOPPING STARTS HERE</p>
@@ -681,7 +754,6 @@ function App() {
           </>
         ) : null}
       </main>
-      )}
 
       <footer className="footer">
         SmartPick | Making smarter product choices
