@@ -1,0 +1,81 @@
+﻿category,number,product_name,suggested_public_path,note
+mobiles,1,iPhone 15,/images/mobiles/001_iPhone_15.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,2,iPhone 15 Plus,/images/mobiles/002_iPhone_15_Plus.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,3,iPhone 14,/images/mobiles/003_iPhone_14.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,4,Samsung Galaxy S24,/images/mobiles/004_Samsung_Galaxy_S24.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,5,Samsung Galaxy S24 Plus,/images/mobiles/005_Samsung_Galaxy_S24_Plus.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,6,Samsung Galaxy A55,/images/mobiles/006_Samsung_Galaxy_A55.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,7,Samsung Galaxy A35,/images/mobiles/007_Samsung_Galaxy_A35.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,8,OnePlus 12,/images/mobiles/008_OnePlus_12.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,9,OnePlus 11R,/images/mobiles/009_OnePlus_11R.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,10,OnePlus Nord CE4,/images/mobiles/010_OnePlus_Nord_CE4.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,11,Xiaomi 14,/images/mobiles/011_Xiaomi_14.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,12,Xiaomi 13 Pro,/images/mobiles/012_Xiaomi_13_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,13,Redmi Note 13 Pro,/images/mobiles/013_Redmi_Note_13_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,14,Redmi Note 13,/images/mobiles/014_Redmi_Note_13.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,15,Realme 12 Pro Plus,/images/mobiles/015_Realme_12_Pro_Plus.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,16,Realme Narzo 70,/images/mobiles/016_Realme_Narzo_70.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,17,Vivo V30,/images/mobiles/017_Vivo_V30.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,18,Vivo V30 Pro,/images/mobiles/018_Vivo_V30_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,19,OPPO Reno 11,/images/mobiles/019_OPPO_Reno_11.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,20,OPPO Reno 11 Pro,/images/mobiles/020_OPPO_Reno_11_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,21,Motorola Edge 50,/images/mobiles/021_Motorola_Edge_50.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,22,Motorola Edge 50 Pro,/images/mobiles/022_Motorola_Edge_50_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,23,iQOO Neo 9 Pro,/images/mobiles/023_iQOO_Neo_9_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,24,iQOO Z9,/images/mobiles/024_iQOO_Z9.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,25,Google Pixel 8,/images/mobiles/025_Google_Pixel_8.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,26,Google Pixel 8a,/images/mobiles/026_Google_Pixel_8a.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,27,Nothing Phone 2a,/images/mobiles/027_Nothing_Phone_2a.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,28,Infinix Zero 30,/images/mobiles/028_Infinix_Zero_30.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,29,Tecno Camon 30,/images/mobiles/029_Tecno_Camon_30.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+mobiles,30,Samsung Galaxy M15,/images/mobiles/030_Samsung_Galaxy_M15.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,1,Samsung Crystal 4K,/images/tvs/001_Samsung_Crystal_4K.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,2,Samsung QLED,/images/tvs/002_Samsung_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,3,Samsung Neo QLED,/images/tvs/003_Samsung_Neo_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,4,LG UHD AI ThinQ,/images/tvs/004_LG_UHD_AI_ThinQ.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,5,LG OLED evo,/images/tvs/005_LG_OLED_evo.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,6,LG QNED,/images/tvs/006_LG_QNED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,7,Sony BRAVIA 4K,/images/tvs/007_Sony_BRAVIA_4K.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,8,Sony BRAVIA XR,/images/tvs/008_Sony_BRAVIA_XR.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,9,Sony BRAVIA OLED,/images/tvs/009_Sony_BRAVIA_OLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,10,Xiaomi X Series,/images/tvs/010_Xiaomi_X_Series.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,11,Xiaomi A Series,/images/tvs/011_Xiaomi_A_Series.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,12,Xiaomi QLED,/images/tvs/012_Xiaomi_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,13,TCL 4K UHD,/images/tvs/013_TCL_4K_UHD.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,14,TCL QLED,/images/tvs/014_TCL_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,15,TCL Mini LED,/images/tvs/015_TCL_Mini_LED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,16,Hisense 4K UHD,/images/tvs/016_Hisense_4K_UHD.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,17,Hisense QLED,/images/tvs/017_Hisense_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,18,Hisense ULED,/images/tvs/018_Hisense_ULED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,19,Acer Google TV,/images/tvs/019_Acer_Google_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,20,Acer 4K UHD,/images/tvs/020_Acer_4K_UHD.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,21,Acer QLED,/images/tvs/021_Acer_QLED.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,22,Vu Premium TV,/images/tvs/022_Vu_Premium_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,23,Kodak 4K TV,/images/tvs/023_Kodak_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,24,Panasonic 4K TV,/images/tvs/024_Panasonic_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,25,Onida Fire TV,/images/tvs/025_Onida_Fire_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,26,Blaupunkt 4K TV,/images/tvs/026_Blaupunkt_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,27,Thomson 4K TV,/images/tvs/027_Thomson_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,28,iFFALCON 4K TV,/images/tvs/028_iFFALCON_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,29,MarQ 4K TV,/images/tvs/029_MarQ_4K_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+tvs,30,Realme Smart TV,/images/tvs/030_Realme_Smart_TV.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,1,Apple Watch Series 9,/images/watches/001_Apple_Watch_Series_9.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,2,Apple Watch SE,/images/watches/002_Apple_Watch_SE.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,3,Samsung Galaxy Watch 6,/images/watches/003_Samsung_Galaxy_Watch_6.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,4,Samsung Galaxy Watch 6 Classic,/images/watches/004_Samsung_Galaxy_Watch_6_Classic.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,5,OnePlus Watch 2,/images/watches/005_OnePlus_Watch_2.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,6,OnePlus Nord Watch,/images/watches/006_OnePlus_Nord_Watch.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,7,boAt Wave Active,/images/watches/007_boAt_Wave_Active.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,8,boAt Ultima Call,/images/watches/008_boAt_Ultima_Call.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,9,Noise ColorFit Pro 5,/images/watches/009_Noise_ColorFit_Pro_5.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,10,Noise Icon 3,/images/watches/010_Noise_Icon_3.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,11,Redmi Watch 4,/images/watches/011_Redmi_Watch_4.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,12,Realme Watch 3 Pro,/images/watches/012_Realme_Watch_3_Pro.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,13,Amazfit GTR 4,/images/watches/013_Amazfit_GTR_4.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,14,Amazfit GTS 4,/images/watches/014_Amazfit_GTS_4.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,15,Garmin Venu 3,/images/watches/015_Garmin_Venu_3.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,16,Garmin Forerunner 265,/images/watches/016_Garmin_Forerunner_265.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,17,Fire Boltt Phoenix,/images/watches/017_Fire_Boltt_Phoenix.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,18,CrossBeats Orbit,/images/watches/018_CrossBeats_Orbit.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,19,Pebble Cosmos Engage,/images/watches/019_Pebble_Cosmos_Engage.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo
+watches,20,Fitbit Versa 4,/images/watches/020_Fitbit_Versa_4.jpg,Generated illustrative crop; verify model accuracy before presenting as exact product photo

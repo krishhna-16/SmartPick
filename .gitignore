@@ -1,0 +1,106 @@
+# ===================================================================
+# SmartPick - Root .gitignore
+# Covers Frontend (React/Vite), Backend (Spring Boot/Maven), and IDEs
+# ===================================================================
+
+# -------------------------------------------------------------------
+# Environment & Sensitive Credentials
+# -------------------------------------------------------------------
+backend/src/main/resources/application.properties
+**/application.properties
+**/application-*.properties
+!**/application.properties.example
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.keystore
+*.jks
+
+# -------------------------------------------------------------------
+# Backend Build Outputs & Dependencies (Maven / Spring Boot)
+# -------------------------------------------------------------------
+target/
+**/target/
+*.jar
+*.war
+*.nar
+*.ear
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# -------------------------------------------------------------------
+# Frontend Build Outputs & Dependencies (Node / Vite / React)
+# -------------------------------------------------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+*.local
+.eslintcache
+.parcel-cache/
+
+# -------------------------------------------------------------------
+# IDE & Editor Configurations
+# -------------------------------------------------------------------
+# STS / Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+**/.classpath
+**/.project
+**/.settings/
+**/.factorypath
+**/.apt_generated
+**/.springBeans
+**/.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+**/.idea/
+*.iws
+*.iml
+*.ipr
+out/
+**/out/
+
+# VS Code
+.vscode/
+**/.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# -------------------------------------------------------------------
+# Logs & Diagnostic Files
+# -------------------------------------------------------------------
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------------------------------------------------------
+# Operating System & Temporary Files
+# -------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+*~
